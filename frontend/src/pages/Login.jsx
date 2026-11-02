@@ -27,14 +27,19 @@ const Login=()=> {
 
       alert('login successfully');
       navigate('/'); 
-    } catch (err) {
-      
-      if (err.response && err.response.data.error) {
-        setErrorMsg(err.response.data.error);
-      } else {
-        setErrorMsg('error when login');
-      }
-    }
+   } catch (err) {
+  console.log('Login Error:', err);
+
+  if (err.response) {
+    setErrorMsg(
+      `Error ${err.response.status}: ${JSON.stringify(err.response.data)}`
+    );
+  } else if (err.request) {
+    setErrorMsg('The server did not respond: ' + err.message);
+  } else {
+    setErrorMsg(err.message);
+  }
+}
   };
 
   return (
