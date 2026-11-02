@@ -9,7 +9,7 @@ const Home=()=> {
 
   
   useEffect(() => {
-    axios.get('http://localhost:5000/api/specialties')
+    axios.get('https://final-project-20pp.onrender.com/api/specialties')
       .then((response) => {
         setSpecialties(response.data); 
         setLoading(false); 

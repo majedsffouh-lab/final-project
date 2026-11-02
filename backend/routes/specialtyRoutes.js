@@ -1,16 +1,18 @@
 const express = require('express');
 const router = express.Router();
-const { getAllSpecialties, createSpecialty, deleteSpecialty } = require('../controllers/specialtyController');
-const { verifyAdmin } = require('../middleware/authMiddleware');
 
+const {
+  getAllSpecialties,
+  createSpecialty,
+  deleteSpecialty
+} = require('../controllers/specialtyController');
 
+const {verifyToken, verifyAdmin} = require('../middleware/authMiddleware');
 
 router.get('/', getAllSpecialties);
 
+router.post('/', verifyToken, verifyAdmin, createSpecialty);
 
-router.post('/',verifyAdmin, createSpecialty);
-
-
-router.delete('/:id',verifyAdmin, deleteSpecialty);
+router.delete('/:id', verifyToken, verifyAdmin, deleteSpecialty);
 
 module.exports = router;

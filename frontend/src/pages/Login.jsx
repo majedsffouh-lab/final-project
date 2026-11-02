@@ -16,7 +16,7 @@ const Login=()=> {
 
     try {
     
-      const response = await axios.post('http://localhost:5000/api/auth/login', {
+      const response = await axios.post('https://final-project-20pp.onrender.com/api/auth/login', {
         email,
         password
       });
@@ -72,7 +72,7 @@ const Login=()=> {
       </form>
 
       <p style={{ marginTop: '15px', textAlign: 'center' }}>
-        no account?<Link to="/register" style={{ color: '0066cc' }}>create new account</Link>
+        no account?<Link to="/register" style={{ color: '#0066cc' }}>create new account</Link>
       </p>
     </div>
   );

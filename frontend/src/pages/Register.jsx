@@ -16,7 +16,7 @@ const Register=()=> {
 
     try {
       
-      await axios.post('http://localhost:5000/api/auth/register', {
+      await axios.post('https://final-project-20pp.onrender.com/api/auth/register', {
         name,
         email,
         password
