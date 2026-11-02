@@ -67,7 +67,7 @@ const Login=()=> {
         </div>
 
         <button type="submit" style={{ padding: '10px', backgroundColor: '#0066cc', color: '#fff', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>
-          lgin
+          login
         </button>
       </form>
 

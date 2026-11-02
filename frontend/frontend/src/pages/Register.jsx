@@ -63,7 +63,7 @@ const Register=()=> {
         </div>
 
         <div>
-          <label>email:</label><br />
+          <label>password:</label><br />
           <input 
             type="password" 
             value={password} 
@@ -74,12 +74,12 @@ const Register=()=> {
         </div>
 
         <button type="submit" style={{ padding: '10px', backgroundColor: '#28a745', color: '#fff', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>
-          تسجيل حساب
+          register
         </button>
       </form>
 
       <p style={{ marginTop: '15px', textAlign: 'center' }}>
-        لديك حساب بالفعل؟ <Link to="/login" style={{ color: '#0066cc' }}>سجل دخولك من هنا</Link>
+        do you have account?<Link to="/login" style={{ color: '#0066cc' }}>login from here</Link>
       </p>
     </div>
   );

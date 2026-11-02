@@ -18,7 +18,7 @@ const AdminPanel=()=> {
           'Authorization': 'Bearer ${token}' 
         },
         body: JSON.stringify({ name, description, department })
-      });
+    });
 
       const data = await response.json();
 
@@ -78,6 +78,7 @@ const AdminPanel=()=> {
 
         <button type="submit" style={{ background: '#27ae60', color: '#fff', padding: '10px', border: 'none', cursor: 'pointer', fontWeight: 'bold' }}>
           
+          add specialty
         </button>
       </form>
     </div>
